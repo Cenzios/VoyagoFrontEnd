@@ -120,7 +120,16 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html,
+  body {
+    @apply overflow-x-hidden;
+  }
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Fix for Radix UI portal white line artifact */
+[data-radix-popper-content-wrapper] {
+  transform-style: preserve-3d !important;
 }
